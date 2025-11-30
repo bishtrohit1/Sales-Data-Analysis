@@ -1,100 +1,49 @@
 # Sales Data Analysis
 
-Welcome to the **Sales Data Analysis** repository! This project is dedicated to analyzing sales data to extract meaningful business insights, visualize trends, and support data-driven decision-making.
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Sample Visualizations](#sample-visualizations)
-- [Contributing](#contributing)
-- [License](#license)
-
----
+A comprehensive project for exploring, analyzing, and visualizing sales data using SQL queries and Power BI dashboards.
 
 ## Project Overview
 
-This repository contains tools, scripts, and notebooks for conducting exploratory data analysis (EDA) and generating reports from sales datasets. The goal is to identify key patterns, trends, and actionable insights that can help businesses optimize their sales strategy.
+This repository enables you to perform deep-dive sales insights via SQL-based exploration and interactive dashboards. It provides the necessary database dumps and Power BI resources required to get you started with your own analysis or extend the provided work.
 
 ## Features
 
-- Data cleaning and preprocessing
-- Exploratory data analysis (EDA)
-- Trend and seasonality analysis
-- Data visualization using popular Python libraries (e.g., Matplotlib, Seaborn)
-- Generation of summary reports
-- Extensible to various sales datasets
+- **SQL Analysis**  
+  - Query templates for extracting actionable insights from sales data.
+  - Multiple database dump versions for flexible experimentation.
 
-## Installation
+- **Data Visualization**  
+  - Complete Power BI dashboard included for sales insight.
+  - PDF export of the dashboard for quick sharing.
 
-1. **Clone the repository:**
+## Repository Structure
 
-   ```bash
-   git clone https://github.com/bishtrohit1/Sales-Data-Analysis.git
-   cd Sales-Data-Analysis
-   ```
+| File/Folders                       | Description                                                    |
+|-------------------------------------|----------------------------------------------------------------|
+| `Sales_db_Initial_Insights.sql`     | SQL queries for initial insights and analysis                  |
+| `db_dump_version_2_main.sql`        | Full sales database dump (version 2)                           |
+| `db_dump_without_ProfitMarginColumns.sql` | Database dump without profit margin columns             |
+| `Sales Insight.pbix`                | Power BI dashboard file                                        |
+| `Sales Insight Dashboard.pdf`       | Exported visualization as PDF                                  |
+| `README.md`                        | This documentation file                                        |
 
-2. **Create a virtual environment (optional but recommended):**
+## Getting Started
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+1. **Database**:  
+   - Use `db_dump_version_2_main.sql` or `db_dump_without_ProfitMarginColumns.sql` to restore the sales database in your SQL server.
+   - Run the queries in `Sales_db_Initial_Insights.sql` to analyze core sales insights.
 
-3. **Install dependencies:**
+2. **Visualization**:  
+   - Open `Sales Insight.pbix` in Power BI Desktop to interact with the dashboard.
+   - Review `Sales Insight Dashboard.pdf` for a static snapshot.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Usage Example
 
-## Usage
+- Restore one of the provided `.sql` files to your local or cloud SQL server.
+- Execute analytics queries from `Sales_db_Initial_Insights.sql`.
+- Connect Power BI to your database if you wish to refresh the dashboard with different data.
 
-1. **Place your sales dataset (CSV format) in the `data/` directory.**
-2. **Run the analysis scripts or Jupyter notebooks:**
+## Requirements
 
-   - Scripts:  
-     ```bash
-     python scripts/your_analysis_script.py
-     ```
-   - Jupyter Notebook:  
-     Open and run the notebook in the `notebooks/` folder using Jupyter Lab or Notebook.
-
-3. **Review output visualizations and reports in the `output/` or `reports/` directory.**
-
-## Project Structure
-
-```
-Sales-Data-Analysis/
-├── data/            # Raw and processed sales data files
-├── notebooks/       # Jupyter notebooks for EDA and visualization
-├── scripts/         # Python scripts for analysis and preprocessing
-├── output/          # Generated charts, plots, and figures
-├── reports/         # Summary reports and findings
-├── requirements.txt # List of dependencies
-└── README.md        # Project documentation
-```
-
-## Sample Visualizations
-
-*Insert sample images or plots here, e.g., sales trends, top products, regional sales heatmaps.*
-
-## Contributing
-
-Contributions are welcome! Please open issues or pull requests for improvements, bug fixes, or new features.
-
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-*For questions or feedback, feel free to open an issue or contact the repository owner.*
+- Microsoft SQL Server or compatible database to load `.sql` files
+- Power BI Desktop (for `.pbix` dashboard viewing)
